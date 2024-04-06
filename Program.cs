@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 Console.Write("Enter your name: ");
 string name = Console.ReadLine();
 string greeting = $"Hello, {name}";
@@ -23,3 +22,8 @@ if(age < keschasAge)
 {
     Console.WriteLine("You are older!");
 }
+string message = 
+    age >= keschasAge 
+        ? "You are older than or equal to Kescha" 
+        : "You are younger than Kescha";
+Console.WriteLine(message);
