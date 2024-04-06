@@ -27,3 +27,19 @@ string message =
         ? "You are older than or equal to Kescha" 
         : "You are younger than Kescha";
 Console.WriteLine(message);
+string message1 = 
+    age >= 0 && keschasAge >=0
+        ? "Your and Kescha's age are positive" 
+        : "Your and/or Kescha's age are negative";
+Console.WriteLine(message1);
+string message2 = 
+    age >= keschasAge || keschasAge >=0
+        ? "Your and/or Kescha's age are positive" 
+        : "Your and Kescha's age are negative";
+Console.WriteLine(message2);
+string message3 = 
+    !(ageDifference >=0)
+        ? "Kescha is older than you" 
+        : "Kescha is not older than you";
+Console.WriteLine(message3);
+// logical operator : &&, ||, !
