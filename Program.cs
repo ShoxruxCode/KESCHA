@@ -12,34 +12,28 @@ Console.WriteLine($"Successfully converted! {age}");
 int keschasAge = 2;
 int ageDifference = age - keschasAge;
 Console.WriteLine($"The difference between your and Kescha's age is {ageDifference}");
-if(age < keschasAge)
+Console.WriteLine("Let me tell you about my friends");
+string[] friendsName = new string[3];
+friendsName[0] = "Vasya";
+friendsName[1] = "Kasee";
+friendsName[2] = name;
+int[] friendsAge = { 1, 2, age};
+string[] friendsAddress = { "Russian", "French", "Uzbek",};
+foreach (string friendName in friendsName)
 {
-    Console.WriteLine("You are younger!");
-} else if(age == keschasAge)
-{
-    Console.WriteLine("You are equal!");
-} else 
-{
-    Console.WriteLine("You are older!");
+    Console.WriteLine(friendName);
 }
-string message = 
-    age >= keschasAge 
-        ? "You are older than or equal to Kescha" 
-        : "You are younger than Kescha";
-Console.WriteLine(message);
-string message1 = 
-    age >= 0 && keschasAge >=0
-        ? "Your and Kescha's age are positive" 
-        : "Your and/or Kescha's age are negative";
-Console.WriteLine(message1);
-string message2 = 
-    age >= keschasAge || keschasAge >=0
-        ? "Your and/or Kescha's age are positive" 
-        : "Your and Kescha's age are negative";
-Console.WriteLine(message2);
-string message3 = 
-    !(ageDifference >=0)
-        ? "Kescha is older than you" 
-        : "Kescha is not older than you";
-Console.WriteLine(message3);
-// logical operator : &&, ||, !
+for(int iteration = 0; iteration < friendsName.Length; iteration++)
+{
+    Console.WriteLine($"{friendsName[iteration]} is {friendsAddress[iteration]} and he is {friendsAge[iteration]} years old");
+}
+int[] number = new int[100];
+Random random= new Random();
+for (int i = 0; i < number.Length; i++)
+{
+    number[i] = random.Next(1,101);
+}
+for (int i = 0; i < number.Length; i++)
+{
+    Console.WriteLine($"array[{i+1}]={number[i]}");
+}
