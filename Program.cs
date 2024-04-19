@@ -1,4 +1,4 @@
-﻿// Basics.Takrorlash bo'limi uchun 2-amaliy vazifa
+// Basics.Takrorlash bo'limi uchun 2-amaliy vazifa
 // Vazifa menejeri:
 // Vazifalarni boshqarish uchun dastur yozing. Foydalanuvchi vazifalarni qo'shishi, o'chirishi va
 // bajarilganligini belgilashi kerak. Dastur vazifalar ro'yxatini va ularning holatini saqlashi kerak.
