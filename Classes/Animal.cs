@@ -14,7 +14,7 @@ namespace   KESCHA.Classes
         {
             Name = animalName;
             Age = animalAge;
-            CalculateAgeDifferenceWithNoReturns(userAge, animalAge);
+            CalculateAgeDifferenceWithNoReturns(userAge);
         }
         public void Print()
         {
@@ -62,9 +62,9 @@ namespace   KESCHA.Classes
             string greeting = $"Hello, {userName}";
             Console.WriteLine(greeting);
         }
-        private void CalculateAgeDifferenceWithNoReturns(int userAge, int animalAge)
+        public void CalculateAgeDifferenceWithNoReturns(int userAge)
         {
-            AgeDifference = userAge - animalAge;
+            AgeDifference = userAge - Age;
         }
     }
 }
