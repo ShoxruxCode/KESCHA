@@ -4,21 +4,28 @@ namespace KESCHA
     class Program
     {
         static void Main()
-        {   
-            Book book= new Book(name: "Kiob nomi");
+        {
+            Car car = new Car(brand: "Mashina markasi");
 
-            Console.Write("Kitob nomini kiriting: ");
-            string name = Console.ReadLine();
-            book.NameBook = name;
+            Console.Write("Mashina markasini kiriting: ");
+            string brand = Console.ReadLine();
 
-            Console.Write("Kitob muallifini kiriting: ");
-            string muallif = Console.ReadLine();
+            Console.Write("Mashina modelini kiriting: ");
+            string model = Console.ReadLine();
 
-            Console.Write("Kitob narxini kiriting: ");
-            int narxi = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Mashina ishlab chiqarilgan yilni kiriting: ");
+            int year = Convert.ToInt32(Console.ReadLine());
 
-            book.KitobHaqida(muallif, narxi);
-            book.KitobMuallifiHaqida(muallif);
+            Console.Write("Mashinaning narxini kiriting: ");
+            decimal price = Convert.ToDecimal(Console.ReadLine());
+
+            Console.Write("Mashinaning maksimal tezligini kiriting: ");
+            decimal speed = Convert.ToDecimal(Console.ReadLine());
+
+            string GetCarInfo = car.GetCarInfo(brand, model, year, price, speed);
+            Console.WriteLine(GetCarInfo);
+            car.CalculateDepreciation(year, price);
+            
         }
     }
 }
