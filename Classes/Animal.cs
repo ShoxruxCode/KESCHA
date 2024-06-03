@@ -1,21 +1,25 @@
 namespace   KESCHA.Classes
 {
-    class Animal
+    public abstract class Animal : IAnimal
     {
         public string Name { get; set; }
         public int Age { get; set; }
         public int AgeDifference { get; set; }
+        public DateTimeOffset CreatedDate { get; set; }
         public Animal(string name, int age)
         {
             Name = name;
             Age = age;
+            CreatedDate = DateTimeOffset.Now;
         }
         public Animal(string animalName, int userAge, int animalAge)
         {
             Name = animalName;
             Age = animalAge;
             CalculateAgeDifferenceWithNoReturns(userAge);
+            CreatedDate = DateTimeOffset.Now;
         }
+        public abstract void Greet2(string userName);
         public void Print()
         {
             Console.WriteLine($"The difference between your and {Name}'s age is {AgeDifference}");
@@ -53,7 +57,7 @@ namespace   KESCHA.Classes
                 Console.WriteLine($"{friendsName[iteration]} is {friendsAddress[iteration]} and he is {friendsAge[iteration]} years old");
             }
         }
-        public void Greet(string userName)
+        public virtual void Greet(string userName)
         {
             if(userName == "")
             {
