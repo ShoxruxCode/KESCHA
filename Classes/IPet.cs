@@ -1,5 +1,3 @@
-using System;
-
 namespace KESCHA.Classes
 {
     public interface IPet

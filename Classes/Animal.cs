@@ -3,24 +3,31 @@ namespace   KESCHA.Classes
     public abstract class Animal : IAnimal
     {
         public string Name { get; set; }
-        public int Age { get; set; }
-        public int AgeDifference { get; set; }
+        protected int Age { get; set; }
+        internal int AgeDifference { get; set; }
         public DateTimeOffset CreatedDate { get; set; }
+        public Animal()
+        {
+            Name = "";
+            Age = 0;
+            AgeDifference = 0;
+            CreatedDate = DateTimeOffset.UtcNow;
+        }
+
         public Animal(string name, int age)
         {
             Name = name;
             Age = age;
-            CreatedDate = DateTimeOffset.Now;
+            CreatedDate = DateTimeOffset.UtcNow;
         }
         public Animal(string animalName, int userAge, int animalAge)
         {
             Name = animalName;
             Age = animalAge;
             CalculateAgeDifferenceWithNoReturns(userAge);
-            CreatedDate = DateTimeOffset.Now;
+            CreatedDate = DateTimeOffset.UtcNow;
         }
-        public abstract void Greet2(string userName);
-        public void Print()
+        public void PrintAgeDifference()
         {
             Console.WriteLine($"The difference between your and {Name}'s age is {AgeDifference}");
         }
@@ -66,6 +73,7 @@ namespace   KESCHA.Classes
             string greeting = $"Hello, {userName}";
             Console.WriteLine(greeting);
         }
+        public abstract void Greet2(string userName);
         public void CalculateAgeDifferenceWithNoReturns(int userAge)
         {
             AgeDifference = userAge - Age;
